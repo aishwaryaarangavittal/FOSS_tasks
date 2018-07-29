@@ -1,5 +1,4 @@
 import webbrowser
-import sys#to use command line arguments
 import requests
 import bs4#contians eautiful soup4
 def scrapper():
