@@ -1,20 +1,19 @@
 import cv2
-import pytesseract
+from pytesseract import image_to_string
 from PIL import Image
 
 path=raw_input("enter file address:")
 image=cv2.imread(path)
-gray=cv2.wtcolor(image,cv2.COLOR_BGR2GRAY)
+gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 filename=raw_input("enter where to store greyscale image:")
 cv.imwrite(filename, gray)  
-text=pytesseract.image_to_string(Image.open(filename))
-text1=""
-text2=""
-for i in len(text):
-    if text[letter]=='+':
-     text1=text[0,letter]
-     text2=text[letter+1:]
-i=int(text1,[10])
-j=int(text2,[10])
-k=i+j
-print k
+t=image_to_string(Image.open(filename))
+
+if t[1]=='+':
+    print (t[0], t[1], t[2], ' = ', int(t[0])+int(t[2]))
+elif t[1]=='-':
+    print (t[0], t[1], t[2], ' = ', int(t[0])-int(t[2]))
+elif t[1]=='*':
+    print (t[0], t[1], t[2], ' = ', int(t[0])*int(t[2]))
+elif t[1]=='/':
+    print (t[0], t[1], t[2], ' = ', int(int(t[0])/int(t[2])))
