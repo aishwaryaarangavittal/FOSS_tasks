@@ -4,7 +4,7 @@ function validate()
     if(document.getElementById("email").value=="yashsja@gmail.com" && document.getElementById("username").value == "yashkhare" && document.getElementById("psw2").value == "optiplex" )
     {
         alert( "validation succeeded" );
-        location.href="run.html";
+        <a href="7.(B)OUTPUT.html">
     }
     else
     {
