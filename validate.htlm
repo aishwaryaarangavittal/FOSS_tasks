@@ -1,0 +1,14 @@
+<script type="text/javascript">
+function validate()
+{
+    if(document.getElementById("email").value=="yashsja@gmail.com" && document.getElementById("username").value == "yashkhare" && document.getElementById("psw2").value == "optiplex" )
+    {
+        alert( "validation succeeded" );
+        location.href="run.html";
+    }
+    else
+    {
+        alert( "validation failed" );
+    }
+}
+</script>
